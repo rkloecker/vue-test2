@@ -1,18 +1,15 @@
 <template>
   <div>
     <h3>All Books</h3>
-    
-    <div class="todos">
-      <div
-        v-for="book in allBooks"
-        :key="book.id"
-      >
-       <!-- <router-link to="/books">{{ book.title }}</router-link> -->
-       <router-link :to="{ name: 'bookdetail', params: { id: book.id }}">{{ book.title }}</router-link>
-        
-        <!-- <i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i> -->
-      </div>
-    </div>
+
+    <ul class>
+      <li class="collection-item listelement" v-for="book in allBooks" :key="book.id">
+        <router-link
+          class="indigo-text text-darken-2 font_links"
+          :to="{ name: 'bookdetail', params: { id: book.id }}"
+        >{{ book.title }}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -22,8 +19,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "HelloWorld",
   methods: {
-    ...mapActions(["init"]),
-   
+    ...mapActions(["init"])
   },
   computed: mapGetters(["allBooks"]),
   created() {
@@ -31,4 +27,14 @@ export default {
   }
 };
 </script>
+
+<style>
+.font_links {
+  font-size: 1.2rem;
+}
+.listelement {
+  padding: 0.5rem 0 !important;
+}
+</style>
+
 
