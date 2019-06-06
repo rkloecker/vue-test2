@@ -40,15 +40,15 @@ export default {
         title: this.title,
         author: this.author
       };
-      console.log(newBook);
+      // console.log(newBook);
       this.updateBook(newBook);
     }
   },
   computed: mapGetters(["oneBook"]),
   created() {
-    console.log(this.$route.params.id);
+    // console.log(this.$route.params.id);
     this.getSingleBook(this.$route.params.id);
-    console.log("author: ", this.oneBook.author);
+    // console.log("author: ", this.oneBook.author);
     this.title = this.oneBook.title;
     this.author = this.oneBook.author;
     this.id = this.oneBook.id;
