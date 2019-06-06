@@ -1,4 +1,8 @@
-# albums
+# books app
+
+### crud book app using Vuex, local storage and Materialize CSS 
+
+deployment with gh-pages: https://rkloecker.github.io/vuex-books-ls/
 
 ## Project setup
 ```

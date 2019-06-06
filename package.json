@@ -1,5 +1,5 @@
 {
-  "name": "albums",
+  "name": "vuex-books-ls",
   "version": "0.1.0",
   "private": true,
   "scripts": {
