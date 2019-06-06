@@ -9,17 +9,12 @@ npm run build
 # navigate into the build output directory
 cd dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
-
 git init
 git add -A
 git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:rkloecker.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:rkloecker/vue-test.git master:gh-pages
+git checkout -b gh-pages
+# https://github.com/<USERNAME>/<repo>.git
+git remote add origin https://github.com/rkloecker/vuex-books-ls.git
+git push origin gh-pages
 
 cd -
