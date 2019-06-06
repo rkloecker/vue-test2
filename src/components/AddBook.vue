@@ -5,11 +5,11 @@
     <div class="add">
       <form @submit="onSubmit">
         <div class="input-field">
-          <input type="text" v-model="title" placeholder="Add Title...">
+          <input type="text" v-model="book.title" placeholder="Add Title...">
           <label class="active" for="title">Title</label>
         </div>
         <div class="input-field">
-          <input type="text" v-model="author" placeholder="Add Author...">
+          <input type="text" v-model="book.author" placeholder="Add Author...">
           <label class="active" for="author">Author</label>
         </div>
         <input type="submit" value="Save" class="btn">
@@ -24,20 +24,15 @@ export default {
   name: "AddBook",
   data() {
     return {
-      title: "",
-      author: ""
+      book: {}
     };
   },
   methods: {
     ...mapActions(["addBook"]),
     onSubmit(e) {
       e.preventDefault();
-      const newBook = {
-        id: Date.now().toString(),
-        title: this.title,
-        author: this.author
-      };
-      this.addBook(newBook);
+      this.book.id = Date.now().toString();
+      this.addBook(this.book);
     }
   }
 };

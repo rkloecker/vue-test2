@@ -19,7 +19,7 @@ export default {
   },
   computed: mapGetters(["oneBook"]),
   created() {
-    console.log(this.$route.params.id);
+    // console.log(this.$route.params.id);
     this.getSingleBook(this.$route.params.id);
   }
 };

@@ -27,8 +27,8 @@ const mutations = {
     (state.books = state.books.map(el => (el.id === book.id ? book : el))),
   getSingleBook: (state, id) => {
     state.singleBook = state.books.filter(el => el.id === id)[0];
-    console.log(state.books);
-    console.log(id);
+    // console.log(state.books);
+    // console.log(id);
   },
 
   remove: (state, id) => (state.books = state.books.filter(el => el.id !== id)),
@@ -57,7 +57,7 @@ const actions = {
     commit("getSingleBook", id);
   },
   updateBook({ commit }, book) {
-    console.log("from store", book);
+    // console.log("from store", book);
     commit("update", book);
     commit("save");
     router.push("/books");
