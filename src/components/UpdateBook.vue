@@ -38,7 +38,6 @@ export default {
   computed: mapGetters(["oneBook"]),
   created() {
     this.getSingleBook(this.$route.params.id);
-
     this.book = this.oneBook;
   }
 };
