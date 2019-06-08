@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
+# run from bash with 
+# bash deploy.sh <reponame>
 
 # abort on errors
 set -e
@@ -13,8 +15,7 @@ git init
 git add -A
 git commit -m 'deploy'
 git checkout -b gh-pages
-# https://github.com/<USERNAME>/<repo>.git
-git remote add origin https://github.com/rkloecker/vuex-books-ls.git
+git remote add origin "$1"
 git push origin gh-pages
 
 cd -
