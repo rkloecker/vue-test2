@@ -26,7 +26,12 @@ const mutations = {
   update: (state, book) =>
     (state.books = state.books.map(el => (el.id === book.id ? book : el))),
   getSingleBook: (state, id) => {
-    state.singleBook = state.books.filter(el => el.id === id)[0];
+    const defaultBook = {
+      author: "unknown author",
+      title: "unknown book",
+      id: "unknown id"
+    };
+    state.singleBook = state.books.filter(el => el.id === id)[0] || defaultBook;
     // console.log(state.books);
     // console.log(id);
   },
