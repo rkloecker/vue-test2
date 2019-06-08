@@ -6,7 +6,7 @@ deployment with gh-pages: https://rkloecker.github.io/vuex-books-ls/
 
 deployment using surge: vuexbooks.surge.sh
 
-important issuses using vue router history mode:
+important issues using vue router history mode:
 
 https://cli.vuejs.org/guide/deployment.html#general-guidelines
 
@@ -21,6 +21,8 @@ for deployment with gh-pages create vue.config.js:
 }`
 
 `bash deploy.sh <my-project>`
+
+for deployment with surge create 200.html and paste content of index.html
 
 ## Project setup
 ```
