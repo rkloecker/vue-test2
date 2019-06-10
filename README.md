@@ -6,7 +6,7 @@ gh-pages uses router mode: hash
 
 [deployment with gh-pages](https://rkloecker.github.io/vuex-books-ls/)
 
-[deployment using surge](vuexbooks.surge.sh)
+[deployment using surge](http://vuexbooks.surge.sh)
 
 important issues using vue router history mode:
 
