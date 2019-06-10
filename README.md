@@ -1,10 +1,12 @@
 # books app
 
-### crud book app using Vuex, local storage and Materialize CSS 
+### crud book app using Vuex, Vue Router, local storage and Materialize CSS
 
-deployment with gh-pages: https://rkloecker.github.io/vuex-books-ls/
+gh-pages uses router mode: hash
 
-deployment using surge: vuexbooks.surge.sh
+[deployment with gh-pages](https://rkloecker.github.io/vuex-books-ls/)
+
+[deployment using surge](vuexbooks.surge.sh)
 
 important issues using vue router history mode:
 
@@ -22,7 +24,7 @@ for deployment with gh-pages create vue.config.js:
 
 `bash deploy.sh <my-project>`
 
-for deployment with surge create 200.html and paste content of index.html
+for deployment with surge create 200.html inside dist folder and paste content of index.html
 
 ## Project setup
 ```
